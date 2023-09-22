@@ -14,4 +14,9 @@ pnpm install vite-plugin-node-polyfills
 # setup TonConnect
 pnpm install @tonconnect/ui-react
 
+# TWA theme properties
+pnpm install @twa-dev/sdk
+
 ```
+
+2. Deployed app: [https://twa-02-counter-ui.surge.sh](https://twa-02-counter-ui.surge.sh)

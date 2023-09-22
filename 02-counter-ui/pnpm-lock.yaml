@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@orbs-network/ton-access': ^2.3.3
   '@tonconnect/ui-react': 2.0.0-beta.2
+  '@twa-dev/sdk': ^6.9.0
   '@types/react': ^18.2.15
   '@types/react-dom': ^18.2.7
   '@typescript-eslint/eslint-plugin': ^6.0.0
@@ -23,6 +24,7 @@ specifiers:
 dependencies:
   '@orbs-network/ton-access': 2.3.3
   '@tonconnect/ui-react': 2.0.0-beta.2_biqbaboplfbrettd7655fr4n2y
+  '@twa-dev/sdk': 6.9.0_react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   ton: 13.6.1_s6y4w7mmcj5fnwotufvq3lb7ya
@@ -645,6 +647,19 @@ packages:
       ua-parser-js: 1.0.36
     transitivePeerDependencies:
       - encoding
+    dev: false
+
+  /@twa-dev/sdk/6.9.0_react@18.2.0:
+    resolution: {integrity: sha512-HP5LFRoSVqHXoRrjBqTQqTFy1R7TORmykqOucRH8C1ZGgO76u2ezthCFqxk5ERW5WXOm2bVkQf1Hbv9tLaEszg==}
+    peerDependencies:
+      react: '>=16.0.0'
+    dependencies:
+      '@twa-dev/types': 6.9.0
+      react: 18.2.0
+    dev: false
+
+  /@twa-dev/types/6.9.0:
+    resolution: {integrity: sha512-hBkIuJgVtkLAPPhKsNfgyBpgS+15spzUScy5jgpfPJPqXPaaUVDTaWHbeEUU+lUgHmryeQjWyz+UjS7987Pyaw==}
     dev: false
 
   /@types/estree/1.0.1:

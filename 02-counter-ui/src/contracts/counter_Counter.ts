@@ -1,4 +1,6 @@
-import { 
+// @ts-nocheck
+
+import {
     Cell,
     Slice, 
     Address, 
