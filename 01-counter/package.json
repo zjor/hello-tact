@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "tact --config ./tact.config.json",
-    "deploy": "source .env && npx ts-node src/deploy.ts",
+    "c": "tact --config ./tact.config.json",
+    "d": "source .env && npx ts-node src/deploy.ts",
     "play": "source .env && npx ts-node src/interact.ts"
   },
   "keywords": [],

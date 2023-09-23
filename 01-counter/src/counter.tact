@@ -1,10 +1,20 @@
 import "@stdlib/deploy";
 
-contract Greeting with Deployable {
-    init() {}
+contract Counter with Deployable {
 
-    get fun greet(): String {
-        return "Hello world";
+    counter: Int as uint32;
+
+    init() {
+        self.counter = 0;
+    }
+
+    receive("inc") {
+        self.counter = self.counter + 1;
+        self.reply("cashback".asComment());
+    }
+
+    get fun counter(): Int {
+        return self.counter;
     }
 
 }

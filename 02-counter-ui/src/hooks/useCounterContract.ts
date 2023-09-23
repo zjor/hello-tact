@@ -14,7 +14,7 @@ export function useCounterContract() {
         if (!client) {
             return
         }
-        const contractAddress = Address.parse('EQDyIQNaImSQNAg_AX-kXUi5N1kM12L2w-wwbqAfa_p74k3W')
+        const contractAddress = Address.parse('EQDjeQwlD91BrsuqSgx_JS_Z6OkJ6Bko6sszenIhdx2F7qIa')
         const contract = Counter.fromAddress(contractAddress)
         return client.open(contract) as OpenedContract<Counter>;
     }, [client]);
@@ -36,7 +36,7 @@ export function useCounterContract() {
         value: val,
         address: counterContract?.address.toString(),
         sendIncrement: async () => {
-            await counterContract?.send(sender, {value: toNano('0.005'), bounce: false}, 'increment')
+            await counterContract?.send(sender, {value: toNano('0.01'), bounce: false}, 'inc')
         },
     };
 }
