@@ -1,0 +1,23 @@
+{
+  "name": "00-emulator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "c": "tact --config ./tact.config.json",
+    "em": "npx ts-node src/emulator.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@orbs-network/ton-access": "^2.3.3",
+    "@tact-lang/compiler": "^1.1.3",
+    "@tact-lang/emulator": "^4.2.3",
+    "@tact-lang/ton-abi": "^0.0.3",
+    "ton": "^13.6.1",
+    "ton-core": "^0.52.0",
+    "ton-crypto": "^3.2.0",
+    "ts-node": "^10.9.1"
+  }
+}
