@@ -22,13 +22,13 @@ async function main() {
     const args = process.argv.slice(2)
     if (args.length < 2) {
         console.log(`
-Usage: pnpm run play <contractAddress> <command> [arg]
+Usage: pnpm run play <contractAddress> <command>
 Commands are
     - get
     - inc
 `)
     }
-    const [address, cmd, arg] = args
+    const [address, cmd] = args
 
     const client = await getTonClient()
     const {contract: walletContract, sender} = await loadWallet(client)
