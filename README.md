@@ -3,7 +3,7 @@
 ## Projects
 
 0. [00 Emulator](00-emulator)
-> Setup for running smart-contracts in TON emulator (in progress)
+> Setup for running smart-contracts in TON emulator
 
 1. [01 Counter contract](01-counter)
 > Demonstrates how to deploy a simple Counter contract from code and interact with it
