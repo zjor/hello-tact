@@ -1,4 +1,4 @@
-import "@stdlib/deploy";
+import "@stdlib/deploy";    // provides Deployable trait
 
 contract Counter with Deployable {
 
@@ -8,13 +8,14 @@ contract Counter with Deployable {
         self.counter = 0;
     }
 
-    receive("inc") {
+    receive("increment") {
         self.counter = self.counter + 1;
+
+        // return the remaining TON sent with the transaction keeping only the gas fees
         self.reply("cashback".asComment());
     }
 
     get fun counter(): Int {
         return self.counter;
     }
-
 }

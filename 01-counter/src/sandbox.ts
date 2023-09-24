@@ -1,5 +1,4 @@
 import {getTonClient, loadWallet} from "./ton-utils";
-import {fromNano} from "ton-core";
 
 async function main() {
     const client = await getTonClient()

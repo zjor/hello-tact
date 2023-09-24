@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "c": "tact --config ./tact.config.json",
-    "d": "source .env && npx ts-node src/deploy.ts",
-    "play": "source .env && npx ts-node src/interact.ts"
+    "compile": "tact --config ./tact.config.json",
+    "deploy": "source .env && npx ts-node src/deploy.ts",
+    "play": "source .env && npx ts-node src/interact.ts",
+    "clean": "rm -rf src/output/*"
   },
   "keywords": [],
   "author": "",
