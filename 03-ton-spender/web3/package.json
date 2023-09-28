@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile": "tact --config ./tact.config.json",
+    "em": "source .env && npx ts-node src/em.ts",
     "deploy": "source .env && npx ts-node src/deploy.ts",
     "play": "source .env && npx ts-node src/interact.ts",
     "clean": "rm -rf src/output/*",

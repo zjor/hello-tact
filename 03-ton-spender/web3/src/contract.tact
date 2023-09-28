@@ -33,7 +33,7 @@ contract Spender with Deployable {
             to: sender(),
             bounce: true,
             value: msg.amount,
-            mode: SendRemainingBalance + SendIgnoreErrors
+            mode: SendIgnoreErrors
         });
     }
 
