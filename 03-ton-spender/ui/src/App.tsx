@@ -1,23 +1,30 @@
 import './App.css'
+import {useState} from 'react'
 import {useSpenderContract} from "./hooks/useSpenderContract";
-import {useTonConnect} from "./hooks/useTonConnect";
+import {useTonConnectUI} from '@tonconnect/ui-react';
 import {TonConnectButton} from "@tonconnect/ui-react";
 import {fromNano} from "ton"
 import tonSymbol from './assets/ton_symbol.png'
 
 function App() {
-    const { connected } = useTonConnect();
+    const [connected, setConnected] = useState<boolean>(false)
     const {total, spend, address} = useSpenderContract()
+    const [tonConnectUI] = useTonConnectUI();
+    tonConnectUI.onStatusChange(_ => {
+        if (connected != tonConnectUI.connected) {
+            setConnected(tonConnectUI.connected)
+        }
+    })
 
     return (
         <div>
             <div>
                 Дорогой друг,<br/>
                 сейчас у тебя есть уникальная возможность
-                <strong>просрать 1 <img className="ton-symbol" src={tonSymbol}/>!</strong>
+                &nbsp;<strong>просрать 1 <img className="ton-symbol" src={tonSymbol}/>!</strong>
             </div>
             { !connected &&
-                <div className="block">
+                <div className="block flex flex-col center-items">
                   <div>Подключи кошелек</div>
                   <TonConnectButton/>
                 </div>
@@ -25,7 +32,7 @@ function App() {
             <div className="block">Как говорил Павел Дуров:</div>
             <div>
                 <button
-                    className="btn primary"
+                    className={`btn primary ${!connected ? "disabled" : ""}`}
                     onClick={() => spend('1.0')}
                     disabled={!connected}
                 >Let's do it!</button>
@@ -35,7 +42,7 @@ function App() {
 
             <div>
                 <button
-                    className="btn secondary"
+                    className={`btn secondary ${!connected ? "disabled" : ""}`}
                     onClick={() => spend('0.5')}
                     disabled={!connected}>
                     Просрать 0.5 <img className="ton-symbol" src={tonSymbol}/>
@@ -49,6 +56,12 @@ function App() {
                 <a href={`https://tonscan.org/address/${address}`}> контракта</a>.
             </div>
 
+            { connected &&
+                <div className="note flex flex-col center-items">
+                  Но если совсем не охота, то можно отключить кошелек.
+                  <TonConnectButton/>
+                </div>
+            }
 
         </div>
     )

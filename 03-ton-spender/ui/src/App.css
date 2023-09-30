@@ -39,13 +39,39 @@
 
 .btn {
   width: 100%;
+  font-weight: bold;
 }
 
 .btn.primary {
-  background-color: greenyellow;
+  background-color: #c9df8a;
   color: #1a1a1a;
+}
+
+.btn.secondary {
+  background-color: #80d2e6;
+  color: #213547;
+}
+
+.btn.disabled {
+  background-color: darkgrey;
 }
 
 .ton-symbol {
   width: 18px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.center-items {
+  align-items: center;
+}
+
+.note {
+  font-size: 0.8em;
 }

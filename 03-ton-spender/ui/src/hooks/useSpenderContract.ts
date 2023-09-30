@@ -48,6 +48,11 @@ export function useSpenderContract() {
     useEffect(() => {
         getTotal().catch(console.log);
         getAvailable().catch(console.log);
+
+        setInterval(() => {
+            getTotal().catch(console.log);
+        }, 10000)
+
     }, [spenderContract]);
 
     return {
