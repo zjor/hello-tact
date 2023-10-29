@@ -1,0 +1,9 @@
+.description {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 144px;
+}
+
+.description__link {
+    color: var(--purple-color);
+}

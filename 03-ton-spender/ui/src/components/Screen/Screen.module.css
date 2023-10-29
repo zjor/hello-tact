@@ -1,0 +1,18 @@
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 242px;
+    height: 174px;
+    position: relative;
+
+    isolation: isolate;
+}
+
+.screen__bg {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}

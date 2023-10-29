@@ -1,0 +1,12 @@
+.ticket {
+    display: flex;
+    align-items: center;
+
+    height: 54px;
+
+    padding-left: 24px;
+    padding-right: 32px;
+
+    border-top-right-radius: 27px;
+    border-bottom-right-radius: 27px;
+}

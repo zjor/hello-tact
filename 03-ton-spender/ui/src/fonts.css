@@ -1,0 +1,14 @@
+@import 'https://fonts.googleapis.com/css2?family=Lalezar&family=Poppins:wght@400&display=swap';
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('./assets/fonts/HelveticaNeueCyr-Medium.eot');
+    src:
+        local('./assets/fonts/HelveticaNeueCyr-Medium'),
+        url('./assets/fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/HelveticaNeueCyr-Medium.woff2') format('woff2'),
+        url('./assets/fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+        url('./assets/fonts/HelveticaNeueCyr-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}

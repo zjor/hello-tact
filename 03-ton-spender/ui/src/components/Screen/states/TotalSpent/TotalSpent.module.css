@@ -1,0 +1,39 @@
+.totalSpent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 32px;
+    font-family: Lalezar, sans-serif;
+
+    color: #fff;
+}
+
+.totalSpent__title {
+    text-transform: uppercase;
+
+    margin-bottom: -4px;
+}
+
+.totalSpent__number {
+    font-size: 80px;
+    line-height: 90%;
+}
+
+.totalSpent__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: -8px;
+}
+
+.footer__text {
+    line-height: 20px;
+    margin-bottom: -6px;
+}
+
+.footer__text span {
+    font-size: 24px;
+}
