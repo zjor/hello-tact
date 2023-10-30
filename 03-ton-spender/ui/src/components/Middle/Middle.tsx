@@ -2,14 +2,14 @@ import { FC, useContext } from 'react'
 import Screen from '../Screen/Screen.tsx'
 import Buttons from './Buttons/Buttons.tsx'
 import { useTonStatus } from '../../hooks/useTonStatus.ts'
-import { spentContext } from '../../contexts/spent/spentContext.ts'
+import { spendContext } from '../../contexts/spent/spendContext.ts'
 import styles from './Middle.module.css'
 
 const Middle: FC = () => {
-    const { userSpent } = useContext(spentContext)
+    const { toSpend } = useContext(spendContext)
     const isConnected = useTonStatus()
 
-    const state = !isConnected ? 0 : userSpent === 0 ? 1 : 2
+    const state = !isConnected ? 0 : toSpend === 0 ? 1 : 2
 
     const areButtonsDisabled = !isConnected
 

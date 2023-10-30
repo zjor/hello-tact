@@ -1,15 +1,15 @@
 import { FC, useContext } from 'react'
 import TonIcon from '../../../TonIcon/TonIcon.tsx'
-import { spentContext } from '../../../../contexts/spent/spentContext.ts'
-import styles from './TotalSpent.module.css'
+import { spendContext } from '../../../../contexts/spent/spendContext.ts'
+import styles from './ToSpend.module.css'
 
-const TotalSpent: FC = () => {
-    const { userSpent } = useContext(spentContext)
+const ToSpend: FC = () => {
+    const { toSpend } = useContext(spendContext)
 
     return (
         <div className={styles.totalSpent}>
-            <h5 className={styles.totalSpent__title}>Spent:</h5>
-            <div className={styles.totalSpent__number}>{userSpent}</div>
+            <h5 className={styles.totalSpent__title}>Spend:</h5>
+            <div className={styles.totalSpent__number}>{toSpend}</div>
             <div className={styles.totalSpent__footer}>
                 <TonIcon size={20} />
                 <p className={styles.footer__text}>
@@ -20,4 +20,4 @@ const TotalSpent: FC = () => {
     )
 }
 
-export default TotalSpent
+export default ToSpend

@@ -1,0 +1,22 @@
+.spendButton__wrapper {
+    padding: 12px 12px 0;
+    background-color: #b2c6cb;
+}
+
+.spendButton {
+    width: 100%;
+    height: 80px;
+
+    font-family: Lalezar, sans-serif;
+    font-size: 40px;
+
+    border-radius: 16px;
+
+    color: #fff;
+    background-color: var(--brand-color);
+}
+
+.spendButton:disabled {
+    color: #888;
+    background-color: #ccc;
+}

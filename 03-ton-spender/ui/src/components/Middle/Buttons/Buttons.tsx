@@ -1,7 +1,6 @@
 import { FC, useContext } from 'react'
 import TonIcon from '../../TonIcon/TonIcon.tsx'
-import { useSpenderContract } from '../../../hooks/useSpenderContract.ts'
-import { spentContext } from '../../../contexts/spent/spentContext.ts'
+import { spendContext } from '../../../contexts/spent/spendContext.ts'
 import styles from './Buttons.module.css'
 
 type Props = {
@@ -9,23 +8,15 @@ type Props = {
 }
 
 const Buttons: FC<Props> = ({ areDisabled }) => {
-    const { spend } = useSpenderContract()
-    const { spendOne, spendHalf } = useContext(spentContext)
-
-    const spendHalfHandler = () => spend('0.5').then(spendHalf)
-    const spendOneHandler = () => spend('1.0').then(spendOne)
+    const { addHalfToSpend, addOneToSpend } = useContext(spendContext)
 
     return (
         <div className={styles.buttons}>
-            <button
-                className={`${styles.button} ${styles.button_sm}`}
-                disabled={areDisabled}
-                onClick={spendHalfHandler}
-            >
+            <button className={`${styles.button} ${styles.button_sm}`} disabled={areDisabled} onClick={addHalfToSpend}>
                 <TonIcon size={24} color={'var(--primary-color)'} />
                 <div>0.5</div>
             </button>
-            <button className={`${styles.button} ${styles.button_lg}`} disabled={areDisabled} onClick={spendOneHandler}>
+            <button className={`${styles.button} ${styles.button_lg}`} disabled={areDisabled} onClick={addOneToSpend}>
                 <TonIcon size={33} color={'var(--primary-color)'} />
                 <div>1</div>
             </button>

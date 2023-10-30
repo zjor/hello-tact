@@ -2,8 +2,7 @@ import { FC } from 'react'
 import styles from './Description.module.css'
 
 const Description: FC = () => {
-    // TODO: change
-    const linkHref = 'https://github.com/zjor'
+    const linkHref = 'https://tonscan.org/address/EQChtz9nKgStm-KTXQxDSSx8xbNCl4b7nnAduJbJH8NI6bVQ'
 
     return (
         <div className={styles.description}>

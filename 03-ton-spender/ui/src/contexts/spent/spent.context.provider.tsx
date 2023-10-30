@@ -1,15 +1,28 @@
 import { FC, PropsWithChildren, useState } from 'react'
-import { spentContext } from './spentContext.ts'
+import { spendContext, SpendContext } from './spendContext.ts'
+import { useSpenderContract } from '../../hooks/useSpenderContract.ts'
 
 const SpentContextProvider: FC<PropsWithChildren> = ({ children }) => {
-    const [userSpent, setUserSpent] = useState(0)
+    const [toSpend, setToSpend] = useState(0)
+    const { spend } = useSpenderContract()
 
-    const spendHalf = () => setUserSpent(userSpent => userSpent + 0.5)
-    const spendOne = () => setUserSpent(userSpent => userSpent + 1)
+    const addOneToSpend = () => setToSpend(toSpend => toSpend + 1)
+    const addHalfToSpend = () => setToSpend(toSpend => toSpend + 0.5)
 
-    const value: spentContext = { userSpent, spendHalf, spendOne }
+    const spendAction = () => {
+        spend(toSpend.toString()).then(() => {
+            setToSpend(0)
+        })
+    }
 
-    return <spentContext.Provider value={value}>{children}</spentContext.Provider>
+    const value: SpendContext = {
+        addOneToSpend,
+        addHalfToSpend,
+        toSpend: toSpend,
+        spend: spendAction
+    }
+
+    return <spendContext.Provider value={value}>{children}</spendContext.Provider>
 }
 
 export default SpentContextProvider

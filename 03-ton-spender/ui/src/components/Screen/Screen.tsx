@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Loading from './states/Loading/Loading.tsx'
 import Go from './states/Go/Go.tsx'
-import TotalSpent from './states/TotalSpent/TotalSpent.tsx'
+import ToSpend from './states/ToSpend/ToSpend.tsx'
 import styles from './Screen.module.css'
 
 enum State {
@@ -17,7 +17,7 @@ type Props = {
 const Screen: FC<Props> = ({ state }) => {
     return (
         <div className={styles.screen}>
-            {[<Loading key={State.Loading} />, <Go key={State.Go} />, <TotalSpent key={State.TotalSpent} />][state]}
+            {[<Loading key={State.Loading} />, <Go key={State.Go} />, <ToSpend key={State.TotalSpent} />][state]}
 
             <svg
                 className={styles.screen__bg}
