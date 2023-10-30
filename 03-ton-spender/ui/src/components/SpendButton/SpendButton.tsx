@@ -5,11 +5,11 @@ import { useTonStatus } from '../../hooks/useTonStatus.ts'
 
 const SpendButton: FC = () => {
     const isConnected = useTonStatus()
-    const { spend } = useContext(spendContext)
+    const { spend, toSpend } = useContext(spendContext)
 
     return (
         <div className={styles.spendButton__wrapper}>
-            <button onClick={spend} disabled={!isConnected} className={styles.spendButton}>
+            <button onClick={spend} disabled={!isConnected || toSpend == 0} className={styles.spendButton}>
                 Spend
             </button>
         </div>
