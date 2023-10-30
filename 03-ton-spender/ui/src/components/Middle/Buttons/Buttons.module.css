@@ -1,0 +1,53 @@
+.buttons {
+    display: flex;
+    align-items: flex-end;
+    gap: 120px;
+
+    top: 250px;
+    position: absolute;
+    padding-left: 10px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--primary-color);
+
+    background-color: transparent;
+}
+
+.button:disabled {
+    filter: grayscale(100%);
+}
+
+.button_sm {
+    gap: 4px;
+
+    width: 77px;
+    height: 77px;
+
+    font-size: 24px;
+
+    background-image: url('../assets/buttons/small-bg.svg');
+}
+
+.button_sm div {
+    margin-top: 2px;
+}
+
+.button_lg {
+    gap: 10px;
+
+    width: 105px;
+    height: 105px;
+
+    font-size: 40px;
+
+    background-image: url('../assets/buttons/large-bg.svg');
+}
+
+.button_lg div {
+    margin-top: 4px;
+}

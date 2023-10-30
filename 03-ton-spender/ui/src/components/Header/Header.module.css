@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 136px;
+
+    background-color: #2d303c;
+}
+
+.header__container {
+    width: 100%;
+    border: 4px solid #df5344;
+    border-radius: 4px;
+    margin: 0 24px;
+}
+
+.header__title {
+    font-family: 'Lalezar', sans-serif;
+    font-size: 56px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--brand-color);
+}

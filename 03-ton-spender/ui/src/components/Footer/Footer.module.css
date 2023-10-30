@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    flex-grow: 1;
+
+    padding: 12px;
+
+    min-height: 352px;
+
+    background-color: #b2c6cb;
+    background-image: url(./assets/Background.svg);
+    background-size: cover;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    border-radius: 1rem;
+    border: 4px solid #2d303c;
+
+    padding: 32px 0 32px 32px;
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}

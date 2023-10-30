@@ -1,0 +1,21 @@
+.totalDontaions {
+    color: var(--primary-color);
+}
+
+.totalDontaions__top {
+    display: flex;
+    align-items: flex-end;
+}
+
+.totalDontaions__number {
+    font-size: 64px;
+}
+
+.totalDontaions__tonIcon {
+    margin-left: 8px;
+    margin-bottom: 10px;
+}
+
+.totalDontaions__title {
+    font-size: 24px;
+}

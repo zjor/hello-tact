@@ -1,0 +1,12 @@
+.ticketer {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 104px;
+    overflow: visible;
+    background: url(./assets/TicketHole.svg) no-repeat left center;
+}
+
+.ticketer__content {
+    margin-bottom: 5px;
+}
